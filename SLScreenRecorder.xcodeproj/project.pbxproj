@@ -9,23 +9,41 @@
 /* Begin PBXBuildFile section */
 		60095EAC217084510016A490 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60095EAB217084510016A490 /* AppDelegate.m */; };
 		60095EAF217084510016A490 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60095EAE217084510016A490 /* ViewController.m */; };
-		60095EB2217084510016A490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60095EB0217084510016A490 /* Main.storyboard */; };
 		60095EB4217084520016A490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60095EB3217084520016A490 /* Assets.xcassets */; };
-		60095EB7217084520016A490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60095EB5217084520016A490 /* LaunchScreen.storyboard */; };
 		60095EBA217084520016A490 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60095EB9217084520016A490 /* main.m */; };
+		60095ECD21708A940016A490 /* wdb700_live_stop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60095EC621708A940016A490 /* wdb700_live_stop@3x.png */; };
+		60095ECE21708A940016A490 /* wdb700_live_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60095EC721708A940016A490 /* wdb700_live_stop@2x.png */; };
+		60095ECF21708A940016A490 /* de20_live_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60095EC821708A940016A490 /* de20_live_play@3x.png */; };
+		60095ED021708A940016A490 /* de20_live_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 60095EC921708A940016A490 /* de20_live_play.png */; };
+		60095ED121708A940016A490 /* de20_live_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60095ECA21708A940016A490 /* de20_live_play@2x.png */; };
+		60095ED221708A940016A490 /* wdb700_live_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 60095ECB21708A940016A490 /* wdb700_live_stop.png */; };
+		60095ED321708A940016A490 /* SLVideoPLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60095ECC21708A940016A490 /* SLVideoPLayerView.m */; };
+		60095ED621757D500016A490 /* ImageWriteToMP4Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 60095ED521757D500016A490 /* ImageWriteToMP4Tool.m */; };
+		FE3E344E94B08D2C8509C897 /* libPods-SLScreenRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD71B8B16DD0526288A4853F /* libPods-SLScreenRecorder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29F27E404CAD2538A9921CB6 /* Pods-SLScreenRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLScreenRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLScreenRecorder/Pods-SLScreenRecorder.release.xcconfig"; sourceTree = "<group>"; };
 		60095EA7217084510016A490 /* SLScreenRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLScreenRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60095EAA217084510016A490 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		60095EAB217084510016A490 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		60095EAD217084510016A490 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		60095EAE217084510016A490 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		60095EB1217084510016A490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60095EB3217084520016A490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		60095EB6217084520016A490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60095EB8217084520016A490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60095EB9217084520016A490 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60095EC421708A940016A490 /* SLVideoPLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVideoPLayerView.h; sourceTree = "<group>"; };
+		60095EC621708A940016A490 /* wdb700_live_stop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wdb700_live_stop@3x.png"; sourceTree = "<group>"; };
+		60095EC721708A940016A490 /* wdb700_live_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wdb700_live_stop@2x.png"; sourceTree = "<group>"; };
+		60095EC821708A940016A490 /* de20_live_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "de20_live_play@3x.png"; sourceTree = "<group>"; };
+		60095EC921708A940016A490 /* de20_live_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = de20_live_play.png; sourceTree = "<group>"; };
+		60095ECA21708A940016A490 /* de20_live_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "de20_live_play@2x.png"; sourceTree = "<group>"; };
+		60095ECB21708A940016A490 /* wdb700_live_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wdb700_live_stop.png; sourceTree = "<group>"; };
+		60095ECC21708A940016A490 /* SLVideoPLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVideoPLayerView.m; sourceTree = "<group>"; };
+		60095ED421757D500016A490 /* ImageWriteToMP4Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageWriteToMP4Tool.h; sourceTree = "<group>"; };
+		60095ED521757D500016A490 /* ImageWriteToMP4Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageWriteToMP4Tool.m; sourceTree = "<group>"; };
+		BD71B8B16DD0526288A4853F /* libPods-SLScreenRecorder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SLScreenRecorder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7D5D9073FC9F90FEFC132B7 /* Pods-SLScreenRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLScreenRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLScreenRecorder/Pods-SLScreenRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3E344E94B08D2C8509C897 /* libPods-SLScreenRecorder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +63,8 @@
 			children = (
 				60095EA9217084510016A490 /* SLScreenRecorder */,
 				60095EA8217084510016A490 /* Products */,
+				EB71D07C913EBC0D83D86E64 /* Pods */,
+				891BBAA50F4D8C1C374157F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +79,58 @@
 		60095EA9217084510016A490 /* SLScreenRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				60095EC321708A940016A490 /* SLPlayer */,
 				60095EAA217084510016A490 /* AppDelegate.h */,
 				60095EAB217084510016A490 /* AppDelegate.m */,
 				60095EAD217084510016A490 /* ViewController.h */,
 				60095EAE217084510016A490 /* ViewController.m */,
-				60095EB0217084510016A490 /* Main.storyboard */,
+				60095ED421757D500016A490 /* ImageWriteToMP4Tool.h */,
+				60095ED521757D500016A490 /* ImageWriteToMP4Tool.m */,
 				60095EB3217084520016A490 /* Assets.xcassets */,
-				60095EB5217084520016A490 /* LaunchScreen.storyboard */,
 				60095EB8217084520016A490 /* Info.plist */,
 				60095EB9217084520016A490 /* main.m */,
 			);
 			path = SLScreenRecorder;
+			sourceTree = "<group>";
+		};
+		60095EC321708A940016A490 /* SLPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				60095EC421708A940016A490 /* SLVideoPLayerView.h */,
+				60095ECC21708A940016A490 /* SLVideoPLayerView.m */,
+				60095EC521708A940016A490 /* Image */,
+			);
+			path = SLPlayer;
+			sourceTree = "<group>";
+		};
+		60095EC521708A940016A490 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				60095EC621708A940016A490 /* wdb700_live_stop@3x.png */,
+				60095EC721708A940016A490 /* wdb700_live_stop@2x.png */,
+				60095EC821708A940016A490 /* de20_live_play@3x.png */,
+				60095EC921708A940016A490 /* de20_live_play.png */,
+				60095ECA21708A940016A490 /* de20_live_play@2x.png */,
+				60095ECB21708A940016A490 /* wdb700_live_stop.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		891BBAA50F4D8C1C374157F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD71B8B16DD0526288A4853F /* libPods-SLScreenRecorder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB71D07C913EBC0D83D86E64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7D5D9073FC9F90FEFC132B7 /* Pods-SLScreenRecorder.debug.xcconfig */,
+				29F27E404CAD2538A9921CB6 /* Pods-SLScreenRecorder.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60095EBD217084520016A490 /* Build configuration list for PBXNativeTarget "SLScreenRecorder" */;
 			buildPhases = (
+				014A70074078D3352050EC83 /* [CP] Check Pods Manifest.lock */,
 				60095EA3217084510016A490 /* Sources */,
 				60095EA4217084510016A490 /* Frameworks */,
 				60095EA5217084510016A490 /* Resources */,
@@ -128,19 +191,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60095EB7217084520016A490 /* LaunchScreen.storyboard in Resources */,
+				60095ECE21708A940016A490 /* wdb700_live_stop@2x.png in Resources */,
+				60095ED121708A940016A490 /* de20_live_play@2x.png in Resources */,
 				60095EB4217084520016A490 /* Assets.xcassets in Resources */,
-				60095EB2217084510016A490 /* Main.storyboard in Resources */,
+				60095ED221708A940016A490 /* wdb700_live_stop.png in Resources */,
+				60095ED021708A940016A490 /* de20_live_play.png in Resources */,
+				60095ECF21708A940016A490 /* de20_live_play@3x.png in Resources */,
+				60095ECD21708A940016A490 /* wdb700_live_stop@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		014A70074078D3352050EC83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SLScreenRecorder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60095EA3217084510016A490 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60095ED321708A940016A490 /* SLVideoPLayerView.m in Sources */,
+				60095ED621757D500016A490 /* ImageWriteToMP4Tool.m in Sources */,
 				60095EAF217084510016A490 /* ViewController.m in Sources */,
 				60095EBA217084520016A490 /* main.m in Sources */,
 				60095EAC217084510016A490 /* AppDelegate.m in Sources */,
@@ -148,25 +238,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		60095EB0217084510016A490 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60095EB1217084510016A490 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		60095EB5217084520016A490 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60095EB6217084520016A490 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		60095EBB217084520016A490 /* Debug */ = {
@@ -281,11 +352,14 @@
 		};
 		60095EBE217084520016A490 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7D5D9073FC9F90FEFC132B7 /* Pods-SLScreenRecorder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QW493RE5T7;
 				INFOPLIST_FILE = SLScreenRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +372,14 @@
 		};
 		60095EBF217084520016A490 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29F27E404CAD2538A9921CB6 /* Pods-SLScreenRecorder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QW493RE5T7;
 				INFOPLIST_FILE = SLScreenRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
