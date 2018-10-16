@@ -62,12 +62,6 @@
     self.player.videoPath = @"http://183.60.197.26/11/w/w/q/z/wwqzjymzsljpgcbnzziajfmdujfwbx/he.yinyuetai.com/8F21015D163444E9FEC0A733966E8FA7.mp4?sc%5Cu003d28633f340cb1d44d%5Cu0026br%5Cu003d3095%5Cu0026vid%5Cu003d2904251%5Cu0026aid%5Cu003d42423%5Cu0026area%5Cu003dML%5Cu0026vst%5Cu003d4";
     
     
-    
-    
-//    self.imageArr =[[NSMutableArray alloc]initWithObjects:
-//
-//                    [UIImage imageNamed:@"1.jpg"],[UIImage imageNamed:@"2.jpg"],[UIImage imageNamed:@"3.jpg"],[UIImage imageNamed:@"4.jpg"],[UIImage imageNamed:@"5.jpg"],[UIImage imageNamed:@"6.jpg"],[UIImage imageNamed:@"7"],[UIImage imageNamed:@"8"],[UIImage imageNamed:@"9.jpg"],[UIImage imageNamed:@"10.jpg"],[UIImage imageNamed:@"11.jpg"],[UIImage imageNamed:@"12.jpg"],[UIImage imageNamed:@"13.jpg"],[UIImage imageNamed:@"14.jpg"],[UIImage imageNamed:@"15.jpg"],[UIImage imageNamed:@"16.jpg"],[UIImage imageNamed:@"17.jpg"],[UIImage imageNamed:@"18.jpg"],[UIImage imageNamed:@"19.jpg"],[UIImage imageNamed:@"20.jpg"],[UIImage imageNamed:@"21.jpg"],[UIImage imageNamed:@"22.jpg"],[UIImage imageNamed:@"23.jpg"],nil];
-    
     UIButton * button =[UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setFrame:CGRectMake(0,300, 100,50)];
     [button setTitle:@"合成"forState:UIControlStateNormal];
@@ -105,37 +99,31 @@
     }else{
         [self.recorderTimer invalidate];
         [self.writerTool stopWrite];
+        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(self.theVideoPath)) {
+            //保存相册核心代码
+            UISaveVideoAtPathToSavedPhotosAlbum(self.theVideoPath, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
+        }
     }
 }
 -(void)recorderTimerAction:(NSTimer *)sender
 {
-    UIImage *image = [self.player getCurrentVideoSnapshot];
+    UIImage *image = [self.player getCurrentVideoSnapshot];//[self ScreenShotWithView:self.view];//
     if (image) {
         [self.writerTool writeImage:image];
     }
+    image = nil;
 }
 
 -(UIImage *)ScreenShotWithView:(UIView *)view{
     
     //这里因为我需要全屏接图所以直接改了，宏定义iPadWithd为1024，iPadHeight为768，
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(view.bounds.size.width*2, view.bounds.size.height*2), YES, 0);     //设置截屏大小
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 0);     //设置截屏大小
-   // UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 0);     //设置截屏大小
     [[view layer] renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    UIGraphicsEndPDFContext();
     
-    //NSData *imageViewData = UIImagePNGRepresentation(viewImage);
-    
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    NSString *documentsDirectory = [paths objectAtIndex:0];
-//    NSString *pictureName= [NSString stringWithFormat:@"healthyLifeShareImage_%d.png",0];
-//    NSString *savedImagePath = [documentsDirectory stringByAppendingPathComponent:pictureName];
-//    NSLog(@"截屏路径打印: %@", savedImagePath);
-    //这里我将路径设置为一个全局String，这里做的不好，我自己是为了用而已，希望大家别这么写
-    //[self SetPickPath:savedImagePath];
-    
-    //[imageViewData writeToFile:savedImagePath atomically:YES];//保存照片到沙盒目录
-    //CGImageRelease(imageRefRect);
     return viewImage;
 }
 
@@ -148,9 +136,6 @@
     //
     //    theMovie.moviePlayer.movieSourceType=MPMovieSourceTypeFile;[theMovie.moviePlayer play];
 }
-
-
-
 
 
 
@@ -225,6 +210,25 @@
         
     }];
 }
+//保存视频完成之后的回调
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if (error) {
+        NSLog(@"保存视频失败%@", error.localizedDescription);
+    }
+    else {
+        NSLog(@"保存视频成功");
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if ([fileManager fileExistsAtPath:videoPath]) {
+            NSError *error = nil;
+            [fileManager removeItemAtPath:videoPath error:&error];
+            NSLog(@">>>removeVideoError:%@",error);
+        }
+    }
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

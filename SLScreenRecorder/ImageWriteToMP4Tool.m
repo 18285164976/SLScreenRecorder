@@ -57,7 +57,7 @@
         buffer = [self pixelBufferFromCGImage:[image CGImage] size:image.size];
         CMTime frameTime = CMTimeMake(self.frameCount,self.fps);
         float frameSeconds = CMTimeGetSeconds(frameTime);
-        
+
         if(buffer && !(self.frameCount !=0 && frameSeconds == 0) && self.adaptor.assetWriterInput.readyForMoreMediaData){
             if (![self.adaptor appendPixelBuffer:buffer withPresentationTime:frameTime]){
                 NSLog(@"error appendingimage %d times frameSeconds:%f\n writerStatus:%ld", self.frameCount,frameSeconds,(long)self.videoWriter.status);
@@ -65,7 +65,7 @@
                 if (state == AVAssetWriterStatusFailed) {
                     NSLog(@"writer error:%@",self.videoWriter.error);
                 }
-                
+
                 if (buffer != NULL) {
                     CVPixelBufferRelease(buffer);
                 }
@@ -75,15 +75,17 @@
             }
             self.frameCount += 1;
         }
-        
+
         if (buffer != NULL) {
             CVPixelBufferRelease(buffer);
         }
+        //CFRelease(buffer);
         return YES;
     }else{
         printf("adaptor not ready %d\n", self.frameCount);
         return NO;
     }
+    return NO;
 }
 - (void)stopWrite
 {
@@ -152,6 +154,8 @@
     CGContextRef context =CGBitmapContextCreate(pxdata,size.width,size.height,8,4*size.width,rgbColorSpace,kCGImageAlphaPremultipliedFirst);
     NSParameterAssert(context);
     CGContextDrawImage(context,CGRectMake(0,0,CGImageGetWidth(image),CGImageGetHeight(image)), image);
+    
+    
     CGColorSpaceRelease(rgbColorSpace);
     CGContextRelease(context);
     CVPixelBufferUnlockBaseAddress(pxbuffer,0);
